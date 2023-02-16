@@ -1,0 +1,39 @@
+<template>
+    <!--Header-->
+        <div class="header" style="height: 5%;">
+            <c-listen-event
+            onlistenevent={postMessageinScreen}
+            >
+            </c-listen-event>
+            <p>Chat Online</p> 
+        </div>
+    <!--/Header-->
+    <!--Body-->
+    <div  class="background">
+        <div  title="Chat com cliente"  style="height: 75%; ">
+            
+            <template if:true={msgs}>
+                <div class="slds-scrollable containerMessages"  data-id="ContainerMsgs" style="height: 100%;">
+                    <template for:each={msgs} for:item="msg" >
+                        <template if:false={msg.remetente}>
+                            <div class="containerDestinatario Msgs" key={msg.id} >
+                                <lightning-avatar variant="circle" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" initials="AW" fallback-icon-name="standard:person_account" alternative-text="Amy Weaver" class="slds-m-right_small"></lightning-avatar>
+                                <p>{msg.body}</p>
+                            </div>
+                        </template>
+                        <template if:true={msg.remetente}>
+                            <div class="containerRemetente Msgs" key={msg.id} >
+                                <p>{msg.body}</p>
+                                <lightning-avatar variant="circle" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg" initials="AW" fallback-icon-name="standard:person_account" alternative-text="Amy Weaver" class="slds-m-right_small"></lightning-avatar>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </template>
+        </div>
+        <div class="slds-box" >
+            <lightning-textarea id="msgArea" onkeyup={handleEnter} value={txtMsg} placeholder="Digite a mensagem..."></lightning-textarea>
+        </div>
+    </div>
+    <!--/Body-->
+</template>

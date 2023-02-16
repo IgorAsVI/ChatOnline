@@ -1,0 +1,76 @@
+.background{
+    background-color: rgb(41, 40, 40);
+    height: 95%;
+    
+}
+
+.header{
+    background-color: rgb(54, 52, 52);
+    text-align: center;
+    height: 100%;
+
+}
+.header p{
+    color: whitesmoke;
+    font-size: medium;
+
+} 
+
+.containerDestinatario{
+    padding: 1%;
+    margin-top: 4%;
+    margin-left: 1%;
+}
+
+.containerRemetente{
+    text-align-last: right;
+    padding: 1%;
+    margin-top: 4%;
+    margin-left: 1%;
+}
+
+
+
+
+.containerDestinatario p{
+    color: whitesmoke;
+    display: inline-flex;
+    border-radius: 3% 6% 6% 6%;
+    background-color: slategrey;
+    width: max-content;
+    padding: 1%;
+    font-size: unset;
+    font-family: monospace;
+    max-width: 60%;
+    padding-left: 2%;
+
+}
+
+.containerRemetente p{
+    color: whitesmoke;
+    display: inline-flex;
+    border-radius: 0.25rem 0.50rem 0.25rem 0.25rem;
+    background-color: slategrey;
+    width: max-content;
+    padding: 1%;
+    font-size: unset;
+    font-family: monospace;
+    max-width: 60%;
+    padding-left: 2%;
+    margin-right: 1%;
+
+
+}
+
+lightning-avatar{
+    margin-top: -4%;
+}
+
+.slds-box{
+    background-color: rgb(54, 52, 52);
+    border: none;
+}
+
+.slds-textarea{
+    background-color: gray;
+}
